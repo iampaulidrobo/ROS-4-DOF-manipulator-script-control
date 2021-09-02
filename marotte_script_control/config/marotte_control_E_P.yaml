@@ -1,0 +1,31 @@
+marotte:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50  
+
+  # Position Controllers ---------------------------------------
+  joint1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: jlink1
+    pid: {p: 100, i: 0, d: 0.1}
+  joint2_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: jlink2
+    pid: {p: 60, i: 0, d: 0}
+  joint3_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: jlink3
+    pid: {p: 10, i: 0, d: 0.15}    
+  joint4_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: jlink4
+    pid: {p: 5, i: 0, d: 0.01}    
+  joint5_1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: jlink5_1
+    pid: {p: 1, i: 0, d: 0}   
+  joint5_2_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: jlink5_2
+    pid: {p: 1, i: 0, d: 0}   
